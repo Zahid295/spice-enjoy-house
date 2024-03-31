@@ -1,0 +1,33 @@
+{% extends 'base.html' %} <!-- Extend the base template -->
+
+{% block content %} <!-- Define a content block to override in child templates -->
+    <section class="hero">
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Discover our delicious menu and enjoy a memorable dining experience.</p>
+        <a href="/menu" class="cta-button">View Menu</a>
+    </section>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>We are passionate about serving fresh, locally sourced ingredients.</p>
+        <p>Our cozy ambiance and friendly staff make dining with us a delight.</p>
+    </section>
+
+    <section class="specials">
+        <h2>Today's Specials</h2>
+        <ul>
+            <li>Grilled Salmon with Lemon Butter Sauce</li>
+            <li>Homemade Ravioli with Truffle Cream</li>
+            <li>Tiramisu for Dessert</li>
+        </ul>
+    </section>
+
+    <section class="reservation">
+        <h2>Table Booking and Reservations</h2>
+        <p>Book your table now for an unforgettable dining experience!</p>
+        <a href="/reservation" class="cta-button">Book a Table</a>
+    </section>
+
+    <!-- Add more sections as needed (e.g., testimonials, contact form) -->
+
+{% endblock %}
