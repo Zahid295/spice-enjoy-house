@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-b^%i-14_r!97x8cu+9cqy059s-_%0u9k$t58%jfouye)3zmpe)
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-zahid295-spice-enjoy-hou-yqsr17acl0.us1.codeanyapp.com', 
-                '.herokuapp.com', '8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'http://codeanywhere.app',  '8001-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8002-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8003-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com']
+                '.herokuapp.com', '8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'http://codeanywhere.app',  '8001-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8002-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8003-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com',  '8005-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com',  '8006-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com']
 
 
 # Application definition
@@ -128,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
