@@ -18,7 +18,7 @@ if os.path.isfile('env.py'):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates//')
 
 
 # Quick-start development settings - unsuitable for production
@@ -28,23 +28,25 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-b^%i-14_r!97x8cu+9cqy059s-_%0u9k$t58%jfouye)3zmpe)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-zahid295-spice-enjoy-hou-yqsr17acl0.us1.codeanyapp.com', 
-                '.herokuapp.com']
+                '.herokuapp.com', '8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'http://codeanywhere.app',  '8001-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8002-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8003-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'booking_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -61,7 +63,7 @@ ROOT_URLCONF = 'code_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': ['TEMPLATES_DIR'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
