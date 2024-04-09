@@ -48,3 +48,12 @@ def book_table(request):
         Table.objects.get_or_create(name=name)
 
     return render(request, 'booking_form.html', {'form': form, 'name_collection': name_collection})
+
+
+def booking_details(request):
+    if request.user.is_authenticated:
+        user_bookings = Booking.objects.filter(user=request.user)
+    else:
+        user_bookings = None
+
+    return render(request, 'booking_details.html', {'user_bookings': user_bookings})

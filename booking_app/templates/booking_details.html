@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>Your Booking Details</h1>
+
+    {% if user.is_authenticated %}
+        {% if user_bookings %}
+            <ul>
+                {% for booking in user_bookings %}
+                    <li>{{ booking.table }} - {{ booking.booking_time }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No bookings found.</p>
+        {% endif %}
+    {% else %}
+        <p>Please log in to view your bookings.</p>
+    {% endif %}
+</div>
+{% endblock content %}
