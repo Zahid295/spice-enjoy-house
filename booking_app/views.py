@@ -47,7 +47,7 @@ def book_table(request):
     for name in tables:
         Table.objects.get_or_create(name=name)
 
-    return render(request, 'booking_form.html', {'form': form, 'name_collection': name_collection})
+    return render(request, 'booking_form.html', {'form': form, 'name_collection': name_collection, 'confirmation_message': 'Booking successful!'})
 
 
 def booking_details(request):
