@@ -106,6 +106,65 @@ section {
     font-size: 1.2em;
 }
 
+/* booking.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the content */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form elements horizontally */
+}
+
+.form-field {
+    width: 50%; /* Set input fields and dropdown to 50% width */
+    margin-bottom: 10px;
+}
+
+select,
+input[type="text"],
+button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 50%; /* Set submit button to 50% width */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the error messages */
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     .header ul li {
