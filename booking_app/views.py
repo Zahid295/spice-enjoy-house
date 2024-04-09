@@ -29,6 +29,13 @@ def book_table(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
+            table = form.cleaned_data['table']
+            booking_time = form.cleaned_data['booking_time']
+            existing_booking = Booking.objects.filter(table=table, booking_time=booking_time).exists()
+            if existing_booking:
+                # show an error message
+                return render(request, 'booking_form.html', {'form': form, 'name_collection': Table.objects.all(), 'error_message': 'This table is already booked at the selected time.'})
+        else:
             form.save()
             # Redirect to a valid URL (e.g., the booking success page)
             return redirect('index')  # Update this to the actual URL
