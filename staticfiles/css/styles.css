@@ -1,0 +1,180 @@
+/* Basic Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.header {
+    height: 70px;
+    padding:0;
+    margin:5px;
+}
+
+/* Header Styles */
+.header ul {
+    padding: 0;
+    margin: 0;
+    background: #333;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center; /* Add this line to center the navigation buttons */
+    height: 60px;
+}
+
+.header ul li {
+    display: inline;
+    padding: 70px;
+   
+}
+
+.header li a {
+    color: yellowgreen;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center; /* Add this line to center the content of your sections */
+}
+/* Specials Section Styles */
+.specials {
+    text-align: center;
+}
+
+.specials ul {
+    display: inline-block;
+    text-align: left;
+}
+/* Specials Section Styles */
+.specials ul {
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    height: 80px;
+    padding: 0;
+    margin-top: 5;
+}
+
+.logo h1 {
+    height: 70px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.hero {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 5;
+}
+
+.hero h2 {
+    font-size: 2em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* booking.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the content */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form elements horizontally */
+}
+
+.form-field {
+    width: 50%; /* Set input fields and dropdown to 50% width */
+    margin-bottom: 10px;
+}
+
+select,
+input[type="text"],
+button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 50%; /* Set submit button to 50% width */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the error messages */
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header ul li {
+        block: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        width: 98%;
+    }
+}
+
