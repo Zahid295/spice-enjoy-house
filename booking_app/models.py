@@ -11,7 +11,7 @@ class Table(models.Model):
         ("Cozy Corner", "Cozy Corner"),
         ("Family Booth", "Family Booth"),
     ]
-    name = models.CharField(max_length=50, choices=CHOICES, default=Window View, validators=[MinLengthValidator(1)])
+    name = models.CharField(max_length=50, choices=CHOICES, default="Window View", validators=[MinLengthValidator(1)])
 
     def __str__(self):
         return self.name
