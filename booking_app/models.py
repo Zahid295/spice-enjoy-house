@@ -11,7 +11,7 @@ class Table(models.Model):
 
 class Booking(models.Model):
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     guest_name = models.CharField(max_length=100)
     booking_date = models.DateField()
     booking_time = models.TimeField()
