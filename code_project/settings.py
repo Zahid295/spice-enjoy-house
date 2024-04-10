@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-zahid295-spice-enjoy-hou-yqsr17acl0.us1.codeanyapp.com', 
                 '.herokuapp.com', '8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'http://codeanywhere.app',  '8001-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8002-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8003-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com',  '8005-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com',  '8006-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'https://8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'https://8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com/admin/login/?next=/admin/']
