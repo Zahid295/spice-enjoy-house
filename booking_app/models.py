@@ -4,7 +4,13 @@ from django.db import models
 # Create your models here.
 
 class Table(models.Model):
-    name = models.CharField(max_length=50)
+
+    CHOICES = [
+        ("Window View", "Window View"),
+        ("Cozy Corner", "Cozy Corner"),
+        ("Family Booth", "Family Booth"),
+    ]
+    name = models.CharField(max_length=50, choices=CHOICES, default=Window View)
 
     def __str__(self):
         return self.name
