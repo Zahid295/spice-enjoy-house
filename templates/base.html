@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>{% block title %}My Restaurant{% endblock %}</title>
+</head>
+<body>
+    <section class="logo">
+        <h1>Spice Enjoy House</h1>
+    </section>
+    <header class="header">
+        <nav>
+            <ul>
+                
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="{% url 'booking-form' %}">Book a Table</a></li>
+                <li><a href="{% url 'booking-details' %}">Booking Details</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+    <footer>
+        <div id="footer">
+        {% block footer %}
+        <p>© 2024 My Restaurant. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service</p>
+        {% endblock %}
+    </div>
+    </footer>
+</body>
+</html>

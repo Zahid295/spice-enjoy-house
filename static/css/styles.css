@@ -22,13 +22,11 @@ body {
 
 .header {
     height: 70px;
-    padding:0;
     margin:5px;
 }
 
 /* Header Styles */
 .header ul {
-    padding: 0;
     margin: 0;
     background: #333;
     display:flex;
@@ -39,8 +37,9 @@ body {
 }
 
 .header ul li {
-    display: inline;
-    padding: 70px;
+    display: block;
+    padding: 30px;
+    
    
 }
 
@@ -168,7 +167,7 @@ button {
 /* Media Queries */
 @media (max-width: 768px) {
     .header ul li {
-        block: inline-block;
+        display: inline-block;
         width: 100%;
         text-align: center;
     }

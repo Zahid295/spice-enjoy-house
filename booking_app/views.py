@@ -9,7 +9,7 @@ from .models import Table, Booking
 
 def index(request):
     
-    return render(request, 'index.html')
+    return render(request, 'booking_app/index.html')
 
 #def book_table(request):
 #    table_names = ["Window View", "Cozy Corner", "Family Booth"]
@@ -34,7 +34,7 @@ def book_table(request):
             existing_booking = Booking.objects.filter(table=table, booking_time=booking_time).exists()
             if existing_booking:
                 # show an error message
-                return render(request, 'booking_form.html', {'form': form, 'name_collection': Table.objects.all(), 'error_message': 'This table is already booked at the selected time.'})
+                return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all(), 'error_message': 'This table is already booked at the selected time.'})
         else:
             form.save()
             # Redirect to a valid URL (e.g., the booking success page)
@@ -44,7 +44,7 @@ def book_table(request):
 
     name_collection = Table.objects.all()
 
-    return render(request, 'booking_form.html', {'form': form, 'name_collection': name_collection, 'confirmation_message': 'Booking successful!'})
+    return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': name_collection, 'confirmation_message': 'Booking successful!'})
 
 
 def booking_details(request):
@@ -53,4 +53,4 @@ def booking_details(request):
     else:
         user_bookings = None
 
-    return render(request, 'booking_details.html', {'user_bookings': user_bookings})
+    return render(request, 'booking_app/booking_details.html', {'user_bookings': user_bookings})

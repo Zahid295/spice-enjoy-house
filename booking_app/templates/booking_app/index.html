@@ -1,25 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
  <!-- Extend the base template -->
- {% block title %}My Restaurant{% endblock %}
+ 
 
 {% block content %} <!-- Define a content block to override in child templates -->
-    <section class="logo">
-        <h1>Spice Enjoy House</h1>
-    </section>
-    <section class="header">
-            <ul>
-                
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="/signup">Sign Up</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="{% url 'booking-form' %}">Book a Table</a></li>
-                <li><a href="{% url 'booking-details' %}">Booking Details</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-
-                
-            </ul>
-    </section>
+    
     <section class="hero">
         <h2>Welcome to Our Restaurant</h2>
         <p>Discover our delicious menu and enjoy a memorable dining experience.</p>
