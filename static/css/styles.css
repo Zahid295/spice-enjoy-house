@@ -21,8 +21,13 @@ body {
 }
 
 .header {
-    height: 70px;
+    height: 200px;
     margin:5px;
+}
+
+.header nav {
+    height: 100px;
+    margin-top: 20px;
 }
 
 /* Header Styles */
