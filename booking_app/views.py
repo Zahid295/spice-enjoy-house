@@ -9,7 +9,7 @@ from .models import Table, Booking
 
 def index(request):
     
-    return render(request, 'booking_app/index.html')
+    return render(request, 'base.html')
 
 #def book_table(request):
 #    table_names = ["Window View", "Cozy Corner", "Family Booth"]
