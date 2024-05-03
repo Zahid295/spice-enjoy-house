@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-zahid295-spice-enjoy-hou-yqsr17acl0.us1.codeanyapp.com', 
-                '.herokuapp.com', '8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'http://codeanywhere.app',  '8001-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8002-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8003-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com',  '8005-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com',  '8006-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'https://8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'https://8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com/admin/login/?next=/admin/', '8000-zahid295-spice-enjoy-hou-nxwijrycs1.us1.codeanyapp.com']
+                '.herokuapp.com', '8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'http://codeanywhere.app',  '8001-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8002-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', '8003-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com',  '8005-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com',  '8006-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'https://8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com', 'https://8000-zahid295-spice-enjoy-hou-0iucegcbna.us1.codeanyapp.com/admin/login/?next=/admin/', '8000-zahid295-spice-enjoy-hou-nxwijrycs1.us1.codeanyapp.com', '8001-zahid295-spice-enjoy-hou-nxwijrycs1.us1.codeanyapp.com']
 
 
 # Application definition

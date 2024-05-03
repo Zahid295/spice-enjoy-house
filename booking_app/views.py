@@ -35,10 +35,10 @@ def book_table(request):
             if existing_booking:
                 # show an error message
                 return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all(), 'error_message': 'This table is already booked at the selected time.'})
-        else:
-            form.save()
+            else:
+                 form.save()
             # Redirect to a valid URL (e.g., the booking success page)
-            return redirect('index')  # Update this to the actual URL
+                 return redirect('index')  # Update this to the actual URL
     else:
         form = BookingForm()
 
