@@ -25,4 +25,5 @@ class Booking(models.Model):
     is_cancelled = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.guest_name} at {self.table} on {self.booking_date}"
+
+        return f"{self.guest_name} at {self.table.name} on {self.booking_date} at {self.booking_time}"

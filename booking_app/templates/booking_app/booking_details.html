@@ -9,7 +9,7 @@
         {% if user_bookings %}
             <ul>
                 {% for booking in user_bookings %}
-                    <li>{{ booking.table }} - {{ booking.booking_time }}</li>
+                    <li>{{ booking }}</li>
                 {% endfor %}
             </ul>
         {% else %}

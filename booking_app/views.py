@@ -36,6 +36,7 @@ def book_table(request):
                 # show an error message
                 return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all(), 'error_message': 'This table is already booked at the selected time.'})
             else:
+                 form.instance.user = request.user
                  form.save()
             # Redirect to a valid URL (e.g., the booking success page)
                  return redirect('index')  # Update this to the actual URL
@@ -48,8 +49,10 @@ def book_table(request):
 
 
 def booking_details(request):
+    print("Current user:", request.user)
     if request.user.is_authenticated:
         user_bookings = Booking.objects.filter(user=request.user)
+        print("User bookings:", user_bookings) 
     else:
         user_bookings = None
 
