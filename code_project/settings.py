@@ -149,6 +149,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = ['https://*.codeanyapp.com']
 
+LOGIN_URL = '/accounts/login/'
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
