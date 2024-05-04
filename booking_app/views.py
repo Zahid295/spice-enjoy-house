@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from .forms import BookingForm
 from .models import Table, Booking
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
 
 
 # Create your views here.
@@ -41,6 +43,7 @@ def book_table(request):
                  form.save()
             # Redirect to a valid URL (e.g., the booking success page)
                  return redirect('index')  # Update this to the actual URL
+
     else:
         form = BookingForm()
 
