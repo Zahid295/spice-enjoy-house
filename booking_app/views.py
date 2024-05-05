@@ -43,6 +43,10 @@ def book_table(request):
                  form.save()
             # Redirect to a valid URL (e.g., the booking success page)
                  return redirect('index')  # Update this to the actual URL
+        else:
+            if 'guest_name' in form.errors:
+                messages.error(request, 'Guest name is too long')
+            return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all()})
 
     else:
         form = BookingForm()
