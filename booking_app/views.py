@@ -52,7 +52,7 @@ def book_table(request):
 
     return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': name_collection, 'confirmation_message': 'Booking successful!'})
 
-
+@login_required
 def booking_details(request):
     print("Current user:", request.user)
     if request.user.is_authenticated:
@@ -62,3 +62,18 @@ def booking_details(request):
         user_bookings = None
 
     return render(request, 'booking_app/booking_details.html', {'user_bookings': user_bookings})
+
+@login_required
+def edit_booking(request, booking_id):
+    booking = Booking.objects.get(id=booking_id)
+    if request.method != 'POST':
+        form = BookingForm(instance=booking)
+    else:
+        form = BookingForm(instance=booking, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('booking-details')
+
+    context = {'form': form, 'booking': booking}
+    return render(request, 'booking_app/edit_booking.html', context)
+
