@@ -9,7 +9,11 @@
         {% if user_bookings %}
             <ul>
                 {% for booking in user_bookings %}
-                <li>{{ booking.guest_name }} at {{ booking.table.name }} on {{ booking.booking_date|date:"d-m-Y" }} at {{ booking.booking_time }}</li>
+                <li>
+                    {{ booking.guest_name }} at {{ booking.table.name }} on {{ booking.booking_date|date:"d-m-Y" }} at {{ booking.booking_time }}
+                    <a href="{% url 'edit-booking' booking.id %}">Edit</a>
+
+                </li>
                 {% endfor %}
             </ul>
         {% else %}
