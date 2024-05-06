@@ -36,7 +36,7 @@ def book_table(request):
             booking_time = form.cleaned_data['booking_time']
             existing_booking = Booking.objects.filter(table=table, booking_time=booking_time).exists()
             if existing_booking:
-                # show an error message
+                messages.error(request, "Oops! It looks like this table is already booked at the selected time. Please choose a different time or table.")
                 return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all(), 'error_message': 'This table is already booked at the selected time.'})
             else:
                  form.instance.user = request.user
@@ -44,8 +44,6 @@ def book_table(request):
             # Redirect to a valid URL (e.g., the booking success page)
                  return redirect('index')  # Update this to the actual URL
         else:
-            if 'guest_name' in form.errors:
-                messages.error(request, 'Guest name is too long')
             return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all()})
 
     else:
