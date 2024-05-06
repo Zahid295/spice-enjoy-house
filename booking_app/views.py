@@ -7,8 +7,7 @@ from django.contrib import messages
 
 
 
-# Create your views here.
-# views.py
+# Views
 
 def index(request):
     
@@ -41,8 +40,8 @@ def book_table(request):
             else:
                  form.instance.user = request.user
                  form.save()
+                 messages.success(request, 'Booking successful!')
             # Redirect to a valid URL (e.g., the booking success page)
-                 return redirect('index')  # Update this to the actual URL
         else:
             return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all()})
 

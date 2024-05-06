@@ -6,6 +6,9 @@ from .models import Booking, Table
 class BookingForm(forms.ModelForm):
     table = forms.ModelChoiceField(queryset=Table.objects.all(), empty_label="Select a table")
     guest_name = forms.CharField(max_length=100)
+    booking_date = forms.DateField(
+        widget=forms.DateInput(format='%d-%m-%Y', attrs={'class': 'form-input', 'type': 'date'})
+    )
 
     class Meta:
         model = Booking

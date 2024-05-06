@@ -16,6 +16,7 @@
     
     <!-- Display each form field manually -->
     {% for field in form %}
+    <div class="form-field">
         <p>
             {{ field.label_tag }}<br>
             {{ field }}
@@ -25,8 +26,10 @@
                 <div class="error-message">
                     {{ field.errors }}
                 </div>
+
             {% endif %}
         </p>
+    </div>
     {% endfor %}
     
     <button type="submit">Book Now</button>

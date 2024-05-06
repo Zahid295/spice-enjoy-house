@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import MinLengthValidator
 
-# Create your models here.
+# Models
 
 class Table(models.Model):
 
@@ -25,5 +25,5 @@ class Booking(models.Model):
     is_cancelled = models.BooleanField(default=False)
 
     def __str__(self):
-
+        formatted_date = self.booking_date.strftime("%d-%m-%Y")
         return f"{self.guest_name} at {self.table.name} on {self.booking_date} at {self.booking_time}"

@@ -44,8 +44,6 @@ body {
 .header ul li {
     display: block;
     padding: 30px;
-    
-   
 }
 
 .header li a {
@@ -58,6 +56,7 @@ section {
     margin: 20px 0;
     text-align: center; /* Add this line to center the content of your sections */
 }
+
 /* Specials Section Styles */
 .specials {
     text-align: center;
@@ -67,6 +66,7 @@ section {
     display: inline-block;
     text-align: left;
 }
+
 /* Specials Section Styles */
 .specials ul {
     list-style-position: inside;
@@ -74,7 +74,6 @@ section {
     flex-direction: column;
     align-items: center;
 }
-
 
 .logo {
     text-align: center;
@@ -137,7 +136,7 @@ form {
 }
 
 select,
-input[type="text"],
+input[type="text"], input[type="date"]
 button {
     width: 100%;
     padding: 12px;
@@ -168,6 +167,48 @@ button {
     }
 }
 
+/* Styles for the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the form labels */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Styles for the form input fields */
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Styles for the form button */
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
