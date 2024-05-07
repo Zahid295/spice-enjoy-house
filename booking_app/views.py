@@ -86,3 +86,6 @@ def delete_booking(request, booking_id):
 
     context = {'booking': booking}
     return render(request, 'booking_app/delete_booking.html', context)
+
+def contact_us(request):
+    return render(request, 'contact_us.html')
