@@ -13,6 +13,9 @@ def index(request):
     
     return render(request, 'base.html')
 
+def contact_us(request):
+    return render(request, 'booking_app/contact_us.html')
+
 #def book_table(request):
 #    table_names = ["Window View", "Cozy Corner", "Family Booth"]
 #    form = BookingForm(initial={'table': table_names[0]})  # Set the default table name
@@ -87,5 +90,3 @@ def delete_booking(request, booking_id):
     context = {'booking': booking}
     return render(request, 'booking_app/delete_booking.html', context)
 
-def contact_us(request):
-    return render(request, 'contact_us.html')
