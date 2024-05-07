@@ -25,3 +25,10 @@ class BookingForm(forms.ModelForm):
         if len(guest_name) > 15:
             raise forms.ValidationError("Guest name is too long")
         return guest_name
+
+    def clean_booking_time(self):
+        booking_time = self.cleaned_data.get('booking_time')
+        if booking_time:
+            if booking_time.hour < 9 or booking_time.hour > 22:
+                raise ValidationError("Booking time must be between 9:00 AM and 10:00 PM.")
+        return booking_time

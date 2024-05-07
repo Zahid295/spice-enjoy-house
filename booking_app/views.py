@@ -77,3 +77,12 @@ def edit_booking(request, booking_id):
     context = {'form': form, 'booking': booking}
     return render(request, 'booking_app/edit_booking.html', context)
 
+@login_required
+def delete_booking(request, booking_id):
+    booking = Booking.objects.get(id=booking_id)
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('booking-details')
+
+    context = {'booking': booking}
+    return render(request, 'booking_app/delete_booking.html', context)
