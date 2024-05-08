@@ -1,18 +1,20 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <title>{% block title %}My Restaurant{% endblock %}</title>
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
-     <h1>Spice Enjoy House</h1>
+            <h1>Spice Enjoy House</h1>
         </div>
         <nav>
             <ul>
-                
+
                 <li><a href="{% url 'index' %}">Home</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
@@ -24,13 +26,17 @@
                 <li><a href="{% url 'booking-details' %}">Booking Details</a></li>
                 <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
 
-                
+
             </ul>
         </nav>
     </header>
     <main>
         {% block content %}
         <section class="hero">
+            <!-- Hero Image -->
+            <div class="hero-image">
+                <img src="{% static 'images/hero_image.jpg' %}" alt="Hero Image">
+            </div>
             <h2>Welcome to Our Restaurant</h2>
             <p>Discover our delicious menu and enjoy a memorable dining experience.</p>
         </section>
@@ -56,11 +62,12 @@
     </main>
     <footer>
         <div id="footer">
-        {% block footer %}
-        <p>© 2024 My Restaurant. All rights reserved.</p>
-        <p>Privacy Policy | Terms of Service</p>
-        {% endblock %}
-    </div>
+            {% block footer %}
+            <p>© 2024 My Restaurant. All rights reserved.</p>
+            <p>Privacy Policy | Terms of Service</p>
+            {% endblock %}
+        </div>
     </footer>
 </body>
+
 </html>

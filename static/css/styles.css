@@ -25,12 +25,12 @@ body {
 }
 
 .header {
-    height: 200px;
+    height: 150px;
     margin:5px;
 }
 
 .header nav {
-    height: 100px;
+    height: 60px;
     margin-top: 20px;
 }
 
@@ -54,10 +54,11 @@ body {
     color: yellowgreen;
 }
 
+
 /* Section Styles */
 section {
-    padding: 20px;
-    margin: 20px 0;
+    padding: 0;
+    margin: 0;
     text-align: center; /* Add this line to center the content of your sections */
 }
 
@@ -95,6 +96,35 @@ section {
     padding: 0;
 }
 
+.reservation {
+    height: 200px;
+}
+.reservation h2 {
+    height: 28px;
+}
+.reservation p {
+    height: 20px;
+}
+.section .reservation button {
+    height: 40px;
+    margin-top: 20px;
+}
+
+/* Styles for the Book a Table button */
+.cta-button {
+    background-color: #ff6347; /* Tomato color */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-top: 50px;
+}
+
+.cta-button:hover {
+    background-color: #ee5a24; /* Darker tomato color on hover */
+}
+
 /* Contact Us Page Styles */
 .contact-us-content {
     display: flex;
@@ -129,15 +159,20 @@ p {
     transform: translate(-50%, -50%);
 }
 
+section .hero {
+    margin: 0;
+}
+
 .hero {
-    height: 100px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     padding: 0;
-    margin: 5;
+    margin-top: 0;
+
 }
 
 .hero h2 {
