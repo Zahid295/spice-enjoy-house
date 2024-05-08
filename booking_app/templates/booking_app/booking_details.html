@@ -7,12 +7,12 @@
 
     {% if user.is_authenticated %}
         {% if user_bookings %}
-            <ul>
+            <ul class="booking_list">
                 {% for booking in user_bookings %}
-                <li>
+                <li class="booking_item">
                     {{ booking.guest_name }} at {{ booking.table.name }} on {{ booking.booking_date|date:"d-m-Y" }} at {{ booking.booking_time }}
-                    <a href="{% url 'edit-booking' booking.id %}">Edit</a>
-                    <a href="{% url 'delete-booking' booking.id %}">Delete</a>
+                    <a href="{% url 'edit-booking' booking.id %}" class="edit-link">Edit</a>
+                    <a href="{% url 'delete-booking' booking.id %}" class="delete-link">Delete</a>
 
                 </li>
                 {% endfor %}
