@@ -11,12 +11,13 @@
     </ul>
 {% endif %}
 
-<h1>Edit Booking</h1>
+<h1 class="center_heading">Edit Booking</h1>
 <form method='post'>
     {% csrf_token %}
     
     <!-- Display each form field manually -->
     {% for field in form %}
+    <div class="form-field">
         <p>
             {{ field.label_tag }}<br>
             {{ field }}
@@ -28,6 +29,7 @@
                 </div>
             {% endif %}
         </p>
+    </div>
     {% endfor %}
     
     <button type="submit">Save Changes</button>
