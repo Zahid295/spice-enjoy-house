@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" class="container">
         <div class="logo">
             <h1>Spice Enjoy House</h1>
         </div>
@@ -32,7 +32,7 @@
     </header>
     <main>
         {% block content %}
-        <section class="hero">
+        <section class="hero" class="container">
             <!-- Hero Image -->
             <div class="hero-image">
                 <img src="{% static 'images/hero_image.jpg' %}" alt="Hero Image">
@@ -40,12 +40,12 @@
             <h2>Welcome to Our Restaurant</h2>
             <p>Discover our delicious menu and enjoy a memorable dining experience.</p>
         </section>
-        <section class="about">
+        <section class="about" class="container">
             <h2>About Us</h2>
             <p>We are passionate about serving fresh, locally sourced ingredients.</p>
             <p>Our cozy ambiance and friendly staff make dining with us a delight.</p>
         </section>
-        <section class="specials">
+        <section class="specials" class="container">
             <h2>Today's Specials</h2>
             <ul>
                 <li>Grilled Salmon with Lemon Butter Sauce</li>
@@ -53,7 +53,7 @@
                 <li>Tiramisu for Dessert</li>
             </ul>
         </section>
-        <section class="reservation">
+        <section class="reservation" class="container">
             <h2>Table Booking and Reservations</h2>
             <p>Book your table now for an unforgettable dining experience!</p>
             <a href="{% url 'booking-form' %}" class="cta-button">Book a Table</a>
