@@ -64,6 +64,7 @@ main {
     align-items:center;
     text-align: center; /* Add this line to center the navigation buttons */
     height: 60px;
+
 }
 
 .header ul li {
@@ -515,7 +516,7 @@ form button {
 }
 
 /* Media Queries */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
     .header {
         height: 150px;
         font-size: 12px;
@@ -530,7 +531,7 @@ form button {
         align-items:center;
         text-align: center; /* Add this line to center the navigation buttons */
         height: 60px;
-        font-size: 12px;
+        font-size: 16px;
     }
    
     .header ul li {
