@@ -530,6 +530,7 @@ form button {
         align-items:center;
         text-align: center; /* Add this line to center the navigation buttons */
         height: 60px;
+        font-size: 12px;
     }
    
     .header ul li {
