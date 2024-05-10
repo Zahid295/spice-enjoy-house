@@ -93,3 +93,30 @@ Agile methodology was used in the development of this project. The implementati
 - CSS - Jigsaw CSS Validator: The CSS code was validated using the Jigsaw CSS Validator.
 - Chrome Dev Tools: Debugging during the project was done using Chrome Dev Tools.
 - LightHouse: The performance of the website was tested using LightHouse.
+
+## Features
+
+### Home Page
+The journey begins at the Home Page, the first stop for our users. It is designed to instantly give users a clear understanding of what Spice Enjoy House is all about. With gaining attention users are guided on how to navigate and utilize the website. The intuitive Navigation Bar and informative body section further enhance the user experience.
+
+### Contact Us Page
+We believe in open communication channels. The Contact Us Page is designed to facilitate direct interaction between users and our team. Whether it is a query, a concern, or feedback, users can reach out to us online which enhances their overall experience.
+
+### Booking Page
+At the heart of Spice Enjoy House is the ability for users to make reservations seamlessly. The Booking Page hosts a user-friendly form that logged-in users can fill out to secure their reservation. For users who are not logged in, they are conveniently redirected to the Login or Register Page.
+
+### Booking Details Page
+Transparency and control are key to a great user experience. The Booking Details Page, accessible only to logged-in users, allows users to view, edit, or delete their existing bookings. If a user opts to edit a booking, they are redirected to a pre-filled form where they can modify their reservation details as needed.
+
+### Navigation Menu
+The Navigation Menu is a consistent guide available on all pages. It contains links to Home, Contact Us, Make a Booking, and Booking Details. Additionally, it integrates with Django's allauth options to provide Login, Logout, and Register options, depending on the user's authentication status.
+
+Here is a quick rundown of the navigation options:
+
+Home (base.html) - Accessible to all
+Contact Us (contact.html) - Accessible to all
+Make a Booking (booking_form.html) - Accessible to logged-in users
+Booking Details (booking_details.html) - Accessible to logged-in users
+Logout (logout.html) - Accessible to logged-in users
+Login (login.html) - Accessible to logged-out users
+Sign up (signup.html) - Accessible to logged-out users
