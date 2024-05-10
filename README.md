@@ -66,3 +66,15 @@ As the website business owner, I want to:
 - I want to easily create a table booking
 - I want to edit or delete a booking
 - I want to enjoy the experience and return to make another booking
+
+## Design
+
+### Font
+
+The Spice Enjoy House web app utilizes the Arial font, a classic and widely-used typeface. This font was chosen for its clean, easy-to-read, and versatile characteristics, making it an ideal fit for a restaurant booking website. Arial is used for both the headings and the body to maintain consistency and readability across the site. For the h1 tags, a larger font size is employed to make them stand out and grab attention. This font selection not only pleases the eye but also aligns well with the restaurant market.
+
+## Developement
+
+### Agile Methodology
+
+Agile methodology was used in the development of this project. The implementation status of all user stories and epics was monitored using the Github projects Kanban Board, which is accessible [here](https://github.com/users/Zahid295/projects/1)
