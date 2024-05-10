@@ -120,3 +120,54 @@ Booking Details (booking_details.html) - Accessible to logged-in users
 Logout (logout.html) - Accessible to logged-in users
 Login (login.html) - Accessible to logged-out users
 Sign up (signup.html) - Accessible to logged-out users
+
+## Deployment
+
+### Pre-Deployment Checklist
+
+Before deploying on Heroku, ensure the following:
+
+Update requirements.txt: This file should list all Python modules imported in the project, ensuring correct configuration on Heroku.
+Create a Procfile: This file is crucial for Heroku to correctly configure the deployment as a gunicorn web app.
+Configure settings.py: Update the ALLOWED_HOSTS list to include 'app_name.heroku.com', 'localhost'. Ensure all static files and directories are correctly configured.
+Set Environment Variables: All environment variables in the env.py file (which is gitignored) must be correctly configured with the database URL, storage URL, and secret key. The hidden variables include SECRET_KEY, DATABASE_URL, CLOUDINARY_URL, and PORT.
+Deploying on Heroku
+Follow these steps to deploy Spice Enjoy House on Heroku:
+
+Create a Heroku account. Optionally, sign up with a student account for credits.
+Once logged in, select “Create a new app”.
+Choose an app name and region.
+Select the deployment method as “Connect to GitHub”.
+Find the desired repository.
+Enable automatic deploys and select the main branch.
+In the settings tab, select “Reveal Config Vars”. Input the required hidden variables.
+Select Node.js and Python as the buildpacks.
+Deploy the app.
+Forking the Repository
+To create a personal copy of the repository:
+
+Go to the GitHub repository.
+Click on the “Fork” button in the upper right-hand corner.
+Optionally, edit the repository name and description.
+Click the green “Create Fork” button.
+Cloning the Repository
+To work on the project locally:
+
+Go to the GitHub repository.
+Locate the green “Code” button above the list of files and click it.
+Select your preferred cloning method (HTTPS, SSH, or GitHub CLI) and copy the URL to your clipboard.
+Open Git Bash.
+Change the current working directory to where you want the cloned directory.
+Type git clone and paste the URL from the clipboard 
+Press Enter to create your local clone.
+Running the Repository Locally
+To run the project locally:
+
+Go to the GitHub repository.
+Locate the green “Code” button above the list of files and click it.
+From the dropdown menu, select “Download Zip”.
+Download and open the zip file to run in an editor.
+Create an env.py file and input the environment variables.
+Ensure PostgreSQL is installed on your computer and ports are open.
+Create a virtual environment for installing the Python modules in the pip file.
+Run python3 makemigrations, migrate and runserver.
