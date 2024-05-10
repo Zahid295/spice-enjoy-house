@@ -30,7 +30,7 @@ As the website business owner, I want to:
 
 ### User Stories
 
-As a user:
+#### As a user:
 
 - I want to visit the website and understand its purpose immediately
 - I want to easily understand how to use the website
@@ -44,7 +44,7 @@ As a user:
 - I want to have an enjoyable experience
 - I want to return to the site to create another booking
 
-As a Website Business Owner
+#### As a Website Business Owner
 
 - As a site owner, I want to provide users with a seamless experience to book a table at our restaurant
 - As a site owner, I want to allow users to easily navigate the website without issues
@@ -54,3 +54,15 @@ As a Website Business Owner
 - As a site owner, I want to allow staff to access and manage bookings efficiently
 - As a site owner, I want to provide clear and accessible contact information to users
 - As a site owner, I want to ensure the website is responsive and looks good on all devices to provide a positive user experience
+
+#### As a New User
+
+- I want to navigate the page intuitively and with ease
+I want to understand the page purpose upon first viewing
+I want to see restaurant contact information
+I want to be able to contact the restaurant directly
+I want to see the restaurant’s social media presence
+I want to easily create an account
+I want to easily create a table booking
+I want to edit or delete a booking
+I want to enjoy the experience and return to make another booking
