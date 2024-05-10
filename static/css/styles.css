@@ -29,6 +29,7 @@ main {
     flex-grow: 1;
 }
 
+/* Footer Styles */
 
 #footer {
     background: #333;
@@ -43,6 +44,8 @@ main {
     font-size: 14px;
 }
 
+/* Header Styles */
+
 .header {
     height: 150px;
     margin-top: 10px;
@@ -55,7 +58,6 @@ main {
     margin-top: 20px;
 }
 
-/* Header Styles */
 .header ul {
     margin: 0;
     background: #333;
@@ -64,6 +66,7 @@ main {
     align-items:center;
     text-align: center; /* Add this line to center the navigation buttons */
     height: 60px;
+    font-size: 20px;
 
 }
 
@@ -81,6 +84,7 @@ main {
 
 
 /* Section Styles */
+
 section {
     padding: 0;
     margin: 0;
@@ -88,6 +92,7 @@ section {
 }
 
 /* Specials Section Styles */
+
 .specials {
     text-align: center;
     margin-bottom: 40px;
@@ -105,6 +110,7 @@ section {
 }
 
 /* Specials Section Styles */
+
 .specials ul {
     list-style-position: inside;
     display: flex;
@@ -159,6 +165,7 @@ section {
 }
 
 /* Styles for the Book a Table button */
+
 .cta-button {
     background-color: #ff6347; 
     color: #fff; 
@@ -174,6 +181,7 @@ section {
 }
 
 /* Contact Us Page Styles */
+
 .contact-us-content {
     display: flex;
     flex-direction: column;
@@ -183,6 +191,7 @@ section {
 }
 
 /* Hero Image */
+
 .hero-image {
     width: 100%;
     height: 350px;
@@ -226,6 +235,7 @@ section .hero {
 }
 
 /* booking.css */
+
 .container {
     width: 600px;
     margin: 0 auto;
@@ -273,6 +283,7 @@ button {
 }
 
 /* Style the error messages */
+
 .error-message {
     color: #ff0000;
     font-size: 14px;
@@ -329,7 +340,7 @@ button {
     background-color: #0056b3;
 }
 
-
+/* Media Query for Large Screen Sizes */
 
 @media screen and (min-width: 1200px) {
     .container {
@@ -348,10 +359,32 @@ button {
         align-items:center;
         text-align: center; /* Add this line to center the navigation buttons */
         height: 60px;
-        font-size: 12px;
+        font-size: 20px;
     }
+/* Smooth transition */
+
+    .header li a {
+        color: yellowgreen;
+        font-weight: bold;
+        transition: color 0.3s ease; 
+    }
+
+/* YellowGreen color on hover */ 
+
+    .header li a:hover {
+        color: #9acd32;
+    }
+
+/* OliveDrab color when active */
+
+    .header li a:active {
+        color: #6b8e23; 
+    }
+    
 }
-/* Media query for responsiveness */
+
+/* Media query for smart phones responsiveness */
+
 @media screen and (max-width: 480px) {
     .container {
         width: 100%;
@@ -473,6 +506,7 @@ button {
 }
 
 /* Styles for the form */
+
 form {
     display: flex;
     flex-direction: column;
@@ -487,6 +521,7 @@ form {
 }
 
 /* Styles for the form labels */
+
 form label {
     display: block;
     margin-bottom: 5px;
@@ -494,6 +529,7 @@ form label {
 }
 
 /* Styles for the form input fields */
+
 form input, form select {
     width: 100%;
     padding: 10px;
@@ -504,6 +540,7 @@ form input, form select {
 }
 
 /* Styles for the form button */
+
 form button {
     width: 100%;
     padding: 10px;
@@ -515,7 +552,8 @@ form button {
     font-size: 16px;
 }
 
-/* Media Queries */
+/* Media Queries for Medium size devices */
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .header {
         height: 150px;
@@ -531,7 +569,7 @@ form button {
         align-items:center;
         text-align: center; /* Add this line to center the navigation buttons */
         height: 60px;
-        font-size: 16px;
+        font-size: 12px;
     }
    
     .header ul li {
@@ -546,9 +584,20 @@ form button {
         color: yellowgreen;
         font-weight: bold;
         text-decoration: none;
+        transition: color 0.3s ease;
         filter: contrast(1.75);
         margin: 0;
     }
+
+    
+    .header li a:hover {
+        color: #adff2f; /* GreenYellow color on hover */
+    }
+    
+    .header li a:active {
+        color: #7cfc00; /* LawnGreen color when active */
+    }
+    
 
     .hero {
         height: 450px;
