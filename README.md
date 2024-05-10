@@ -43,3 +43,14 @@ As a user:
 - I want the ability to delete my bookings
 - I want to have an enjoyable experience
 - I want to return to the site to create another booking
+
+As a Website Business Owner
+
+- As a site owner, I want to provide users with a seamless experience to book a table at our restaurant
+- As a site owner, I want to allow users to easily navigate the website without issues
+- As a site owner, I want to encourage users to create an account for easy management of their bookings
+- As a site owner, I want to allow users to manage their bookings, giving them the ability to edit or delete their bookings as needed
+- As a site owner, I want to collect user information for booking purposes and to improve our services
+- As a site owner, I want to allow staff to access and manage bookings efficiently
+- As a site owner, I want to provide clear and accessible contact information to users
+- As a site owner, I want to ensure the website is responsive and looks good on all devices to provide a positive user experience
