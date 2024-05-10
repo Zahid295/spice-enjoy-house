@@ -27,3 +27,19 @@ As the website business owner, I want to:
 - Collect user information for booking purposes
 - Allow staff to access and manage bookings
 - Provide contact information to users
+
+### User Stories
+
+As a user:
+
+- I want to visit the website and understand its purpose immediately
+- I want to easily understand how to use the website
+- I want to be able to contact the restaurant
+- I want to create an account easily
+- I want to input my information with ease
+- I want to create a table booking with ease
+- I want the ability to view my bookings
+- I want the ability to change my bookings
+- I want the ability to delete my bookings
+- I want to have an enjoyable experience
+- I want to return to the site to create another booking
