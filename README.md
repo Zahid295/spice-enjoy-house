@@ -78,3 +78,18 @@ The Spice Enjoy House web app utilizes the Arial font, a classic and widely-used
 ### Agile Methodology
 
 Agile methodology was used in the development of this project. The implementation status of all user stories and epics was monitored using the Github projects Kanban Board, which is accessible [here](https://github.com/users/Zahid295/projects/1)
+
+## Technologies Used
+
+- Python: The backbone of this project is Python.
+- HTML: The structure of the website is built with HTML.
+- CSS: The visual appeal of the website is achieved with CSS.
+- GitHub: The codebase is hosted on GitHub.
+- Codenaywhere: The development environment for the website was GitPod.
+- Git: Git was the version control system used during development.
+- Heroku: The live website is hosted on Heroku.
+- PEP8 Validator: The Python code was validated using the PEP8 Validator.
+- HTML - W3C HTML Validator: The HTML code was validated using the W3C HTML Validator.
+- CSS - Jigsaw CSS Validator: The CSS code was validated using the Jigsaw CSS Validator.
+- Chrome Dev Tools: Debugging during the project was done using Chrome Dev Tools.
+- LightHouse: The performance of the website was tested using LightHouse.
