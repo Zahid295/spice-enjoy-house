@@ -171,3 +171,18 @@ Create an env.py file and input the environment variables.
 Ensure PostgreSQL is installed on your computer and ports are open.
 Create a virtual environment for installing the Python modules in the pip file.
 Run python3 makemigrations, migrate and runserver.
+
+## Credits
+
+### Content
+
+The structure and layout of the README file were inspired by the templates provided by the Code Institute.
+
+The visual elements and images that enhance the project were sourced from Pixabay.
+
+The foundational template for the Python code was graciously supplied by the Code Institute.
+
+The “I think Therefore I blog” walkthrough from the Code Institute was a significant source of inspiration and guidance for this project.
+
+
+
