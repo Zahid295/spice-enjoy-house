@@ -4,34 +4,34 @@
 {% block content %}
 <!-- Django messages -->
 {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
         {% endfor %}
-    </ul>
+</ul>
 {% endif %}
 
 <h1 class="center_heading">Edit Booking</h1>
 <form method='post'>
     {% csrf_token %}
-    
+
     <!-- Display each form field manually -->
     {% for field in form %}
     <div class="form-field">
         <p>
             {{ field.label_tag }}<br>
             {{ field }}
-            
+
             <!-- Display field-specific errors -->
             {% if field.errors %}
-                <div class="error-message">
-                    {{ field.errors }}
-                </div>
-            {% endif %}
+        <div class="error-message">
+            {{ field.errors }}
+        </div>
+        {% endif %}
         </p>
     </div>
     {% endfor %}
-    
+
     <button type="submit">Save Changes</button>
 </form>
 {% endblock content %}

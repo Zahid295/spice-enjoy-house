@@ -1,27 +1,52 @@
+<!-- This template inherits from the base.html template -->
 {% extends "base.html" %}
+
+<!-- Load the static module to use static files like CSS, JavaScript, Images -->
 {% load static %}
 
+<!-- Content block that can be overridden by child templates -->
 {% block content %}
+
+<!-- Container for the content -->
 <div class="container">
+
+    <!-- Title of the page -->
     <h1>Your Booking Details</h1>
 
+    <!-- Check if the user is authenticated -->
     {% if user.is_authenticated %}
-        {% if user_bookings %}
-            <ul class="booking_list">
-                {% for booking in user_bookings %}
-                <li class="booking_item">
-                    {{ booking.guest_name }} at {{ booking.table.name }} on {{ booking.booking_date|date:"d-m-Y" }} at {{ booking.booking_time }}
-                    <a href="{% url 'edit-booking' booking.id %}" class="edit-link">Edit</a>
-                    <a href="{% url 'delete-booking' booking.id %}" class="delete-link">Delete</a>
 
-                </li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No bookings found.</p>
-        {% endif %}
+    <!-- Check if the user has any bookings -->
+    {% if user_bookings %}
+
+    <!-- Unordered list for the bookings -->
+    <ul class="booking_list">
+
+        <!-- Loop through each booking -->
+        {% for booking in user_bookings %}
+
+        <!-- List item for each booking. Displays the booking details and links to edit and delete the booking -->
+        <li class="booking_item">
+            {{ booking.guest_name }} at {{ booking.table.name }} on {{ booking.booking_date|date:"d-m-Y" }} at {{
+            booking.booking_time }}
+            <a href="{% url 'edit-booking' booking.id %}" class="edit-link">Edit</a>
+            <a href="{% url 'delete-booking' booking.id %}" class="delete-link">Delete</a>
+        </li>
+
+        {% endfor %}
+    </ul>
+
+    <!-- If the user has no bookings, display a message -->
     {% else %}
-        <p>Please log in to view your bookings.</p>
+    <p>No bookings found.</p>
     {% endif %}
+
+    <!-- If the user is not authenticated, display a message -->
+    {% else %}
+    <p>Please log in to view your bookings.</p>
+    {% endif %}
+
 </div>
+
+<!-- End of content block -->
 {% endblock content %}

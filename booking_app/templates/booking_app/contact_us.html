@@ -1,17 +1,38 @@
+<!-- This template inherits from the base.html template -->
 {% extends "base.html" %}
+
+<!-- Load the static module to use static files like CSS, JavaScript, Images -->
 {% load static %}
 
+<!-- Content block that can be overridden by child templates -->
 {% block content %}
+
 <!-- Hero Image -->
 <div class="hero-image">
+    <!-- Static image file -->
     <img src="{% static 'images/hero_image.jpg' %}" alt="Hero Image">
 </div>
-<div class="contact-us-content">
-<h1>Contact Us</h1>
-<p >We'd love to hear from you! Whether you have a question about reservations, our menu, or anything else, our team is ready to answer all your questions.</p>
 
-<h2>Spice Enjoy House</h2>
-<p>123 Main Street, Anytown, Anystate, 12345</p>
-<p>Email: info@SpiceEnjoyHouse.com</p>
+<!-- Contact us section -->
+<div class="contact-us-content">
+
+    <!-- Section title -->
+    <h1>Contact Us</h1>
+
+    <!-- Description about contacting the restaurant -->
+    <p>We'd love to hear from you! Whether you have a question about reservations, our menu, or anything else, our team
+        is ready to answer all your questions.</p>
+
+    <!-- Restaurant name -->
+    <h2>Spice Enjoy House</h2>
+
+    <!-- Restaurant address -->
+    <p>123 Main Street, Anytown, Anystate, 12345</p>
+
+    <!-- Restaurant email -->
+    <p>Email: info@SpiceEnjoyHouse.com</p>
+
 </div>
+
+<!-- End of content block -->
 {% endblock content %}

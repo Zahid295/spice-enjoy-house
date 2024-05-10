@@ -1,70 +1,107 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
+<!-- Load the static module to use static files like CSS, JavaScript, Images -->
+{% load static %} 
+<!-- Defines the document type and version of HTML -->
+<!DOCTYPE html> 
+<!-- Root element of an HTML document -->
+<html> 
 
+<!-- Contains meta information and document-related data like CSS -->
 <head>
+    <!-- Makes the webpage look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link to the CSS file -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <!-- Title of the webpage --> 
     <title>{% block title %}My Restaurant{% endblock %}</title>
 </head>
 
+<!-- Contains the content that will be visible to the user -->
 <body>
+    <!-- Header section of the webpage -->
     <header class="header" class="container">
-        <div class="logo">
+        <!-- Logo of the restaurant -->
+        <div class="logo"> 
             <h1>Spice Enjoy House</h1>
         </div>
+
+        <!-- Navigation menu -->
         <nav>
-            <ul>
-
+            <!-- List of navigation links -->
+            <ul> 
+                <!-- Home page link -->
                 <li><a href="{% url 'index' %}">Home</a></li>
+                <!-- Check if the user is authenticated --> 
                 {% if user.is_authenticated %}
+                <!-- If authenticated, show logout link --> 
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                <!-- If not authenticated --> 
                 {% else %}
+                <!-- Show sign up link --> 
                 <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-                <li><a href="{% url 'account_login' %}">Login</a></li>
+                <!-- Show login link -->
+                <li><a href="{% url 'account_login' %}">Login</a></li> 
                 {% endif %}
+                <!-- Link to booking form -->
                 <li><a href="{% url 'booking-form' %}">Book a Table</a></li>
+                <!-- Link to booking details --> 
                 <li><a href="{% url 'booking-details' %}">Booking Details</a></li>
+                <!-- Link to contact us page --> 
                 <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
-
-
             </ul>
         </nav>
     </header>
+    <!-- Main content of the webpage -->
     <main>
+        <!-- Content block that can be overridden by child templates -->
         {% block content %}
-        <section class="hero" class="container">
-            <!-- Hero Image -->
+        <!-- Hero section with a large image and call to action -->
+        <section class="hero" class="container"> 
+             <!-- Hero image -->
             <div class="hero-image">
+                 <!-- Static image file -->
                 <img src="{% static 'images/hero_image.jpg' %}" alt="Hero Image">
             </div>
+             <!-- Welcome message -->
             <h2>Welcome to Our Restaurant</h2>
-            <p>Discover our delicious menu and enjoy a memorable dining experience.</p>
+            <!-- Brief description -->
+            <p>Discover our delicious menu and enjoy a memorable dining experience.</p> 
         </section>
+        <!-- About us section -->
         <section class="about" class="container">
-            <h2>About Us</h2>
+            <h2>About Us</h2> 
+            <!-- Description about the restaurant -->
             <p>We are passionate about serving fresh, locally sourced ingredients.</p>
+             <!-- Additional information --> 
             <p>Our cozy ambiance and friendly staff make dining with us a delight.</p>
         </section>
-        <section class="specials" class="container">
+        <!-- Today's specials section -->
+        <section class="specials" class="container"> 
+            <!-- Section title -->
             <h2>Today's Specials</h2>
-            <ul>
-                <li>Grilled Salmon with Lemon Butter Sauce</li>
-                <li>Homemade Ravioli with Truffle Cream</li>
+            <!-- List of specials --> 
+            <ul> 
+                <li>Grilled Salmon with Lemon Butter Sauce</li> 
+                <li>Homemade Ravioli with Truffle Cream</li> 
                 <li>Tiramisu for Dessert</li>
             </ul>
         </section>
-        <section class="reservation" class="container">
+        <!-- Reservation section -->
+        <section class="reservation" class="container"> 
             <h2>Table Booking and Reservations</h2>
-            <p>Book your table now for an unforgettable dining experience!</p>
-            <a href="{% url 'booking-form' %}" class="cta-button">Book a Table</a>
+            <!-- Call to action for booking -->
+            <p>Book your table now for an unforgettable dining experience!</p> 
+            <!-- Button to book a table -->
+            <a href="{% url 'booking-form' %}" class="cta-button">Book a Table</a> 
         </section>
-        {% endblock %}
+        <!-- End of content block -->
+        {% endblock %} 
     </main>
-    <footer>
-        <div id="footer">
-            {% block footer %}
-            <p>© 2024 My Restaurant. All rights reserved.</p>
-            <p>Privacy Policy | Terms of Service</p>
+    <!-- Footer of the webpage -->
+    <footer> 
+        <div id="footer"> 
+            {% block footer %} 
+            <p>© 2024 My Restaurant. All rights reserved.</p> 
+            <p>Privacy Policy | Terms of Service</p> 
             {% endblock %}
         </div>
     </footer>

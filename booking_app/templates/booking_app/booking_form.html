@@ -1,37 +1,53 @@
+<!-- This template inherits from the base.html template -->
 {% extends "base.html" %}
+
+<!-- Load the static module to use static files like CSS, JavaScript, Images -->
 {% load static %}
 
+<!-- Content block that can be overridden by child templates -->
 {% block content %}
-<!-- Display Django messages -->
+
+<!-- Check if there are any messages to display -->
 {% if messages %}
+    <!-- Unordered list for messages -->
     <ul class="messages">
+        <!-- Loop through each message -->
         {% for message in messages %}
+            <!-- List item for each message. If the message has tags, add them as a class -->
             <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
         {% endfor %}
     </ul>
 {% endif %}
 
+<!-- Form starts here, method is POST -->
 <form method='post'>
+    <!-- CSRF token for security -->
     {% csrf_token %}
     
-    <!-- Display each form field manually -->
+    <!-- Loop through each field in the form -->
     {% for field in form %}
+    <!-- Div for each form field -->
     <div class="form-field">
         <p>
+            <!-- Display the label for the field -->
             {{ field.label_tag }}<br>
+            <!-- Display the field itself -->
             {{ field }}
             
-            <!-- Display field-specific errors -->
+            <!-- Check if the field has any errors -->
             {% if field.errors %}
+                <!-- If there are errors, display them in a div -->
                 <div class="error-message">
                     {{ field.errors }}
                 </div>
-
             {% endif %}
         </p>
     </div>
     {% endfor %}
     
+    <!-- Submit button for the form -->
     <button type="submit">Book Now</button>
 </form>
+
+<!-- End of content block -->
 {% endblock content %}
