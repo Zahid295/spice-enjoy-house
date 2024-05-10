@@ -58,11 +58,11 @@ As the website business owner, I want to:
 #### As a New User
 
 - I want to navigate the page intuitively and with ease
-I want to understand the page purpose upon first viewing
-I want to see restaurant contact information
-I want to be able to contact the restaurant directly
-I want to see the restaurant’s social media presence
-I want to easily create an account
-I want to easily create a table booking
-I want to edit or delete a booking
-I want to enjoy the experience and return to make another booking
+- I want to understand the page purpose upon first viewing
+- I want to see restaurant contact information
+- I want to be able to contact the restaurant directly
+- I want to see the restaurant’s social media presence
+- I want to easily create an account
+- I want to easily create a table booking
+- I want to edit or delete a booking
+- I want to enjoy the experience and return to make another booking
