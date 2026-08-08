@@ -101,9 +101,9 @@ DATABASES = {
    }
 }
 
-# DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-# }
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -148,7 +148,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://*.codeanyapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://*.herokuapp.com']
 
 LOGIN_URL = '/accounts/login/'
 
