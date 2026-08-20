@@ -6,12 +6,13 @@
 {% block head_title %}{% trans "Signup" %}{% endblock head_title %}
 
 {% block content %}
-<div class="center_text">
-<h1>{% trans "Sign Up" %}</h1>
+<main class="account-page">
+<section class="account-card" aria-labelledby="signup-title">
+<h1 id="signup-title">{% trans "Sign Up" %}</h1>
 
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<form class="account-form signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
   {% if redirect_field_value %}
@@ -19,6 +20,6 @@
   {% endif %}
   <button type="submit">{% trans "Sign Up" %} &raquo;</button>
 </form>
-</div>
-</div>
+</section>
+</main>
 {% endblock content %}

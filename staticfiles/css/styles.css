@@ -325,6 +325,99 @@ button {
     justify-content: center;
 }
 
+/* Account forms */
+
+.account-page {
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+}
+
+.account-card {
+    width: min(100%, 460px);
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.account-card h1 {
+    margin-top: 0;
+    color: #333333;
+    text-align: center;
+}
+
+.account-card p {
+    color: #555555;
+    font-weight: normal;
+}
+
+.account-form {
+    align-items: stretch;
+}
+
+.account-form p {
+    margin: 0 0 16px;
+}
+
+.account-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.account-form input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font: inherit;
+    font-weight: normal;
+}
+
+.account-form input:focus {
+    outline: 2px solid #ff6347;
+    outline-offset: 1px;
+}
+
+.account-form button,
+.account-form .primaryAction,
+.account-form .secondaryAction {
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px 16px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.account-form button,
+.account-form .primaryAction {
+    background: #ff6347;
+    color: #ffffff;
+    border: 0;
+    font-weight: bold;
+}
+
+.account-form button:hover,
+.account-form .primaryAction:hover {
+    background: #ee5a24;
+}
+
+.account-form .secondaryAction {
+    display: block;
+    color: #007bff;
+    font-weight: normal;
+}
+
+.account-form ul.errorlist {
+    padding: 0;
+    color: #b42318;
+    list-style: none;
+    font-weight: normal;
+}
+
 .cancel_option {
     display: inline-block;
     background-color: #007bff;

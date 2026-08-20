@@ -36,7 +36,13 @@ def book_table(request):
         if form.is_valid():
             table = form.cleaned_data['table']
             booking_time = form.cleaned_data['booking_time']
-            existing_booking = Booking.objects.filter(table=table, booking_time=booking_time).exists()
+            booking_date = form.cleaned_data['booking_date']
+            existing_booking = Booking.objects.filter(
+                table=table,
+                booking_date=booking_date,
+                booking_time=booking_time,
+                is_cancelled=False,
+            ).exists()
             if existing_booking:
                 messages.error(request, "Oops! It looks like this table is already booked at the selected time. Please choose a different time or table.")
                 return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all(), 'error_message': 'This table is already booked at the selected time.'})
@@ -44,7 +50,7 @@ def book_table(request):
                  form.instance.user = request.user
                  form.save()
                  messages.success(request, 'Booking successful!')
-            # Redirect to a valid URL (e.g., the booking success page)
+                 return redirect('booking-details')
         else:
             return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all()})
 
