@@ -20,7 +20,7 @@
 {% endif %}
 
 <!-- Form starts here, method is POST -->
-<form method='post'>
+<form method='post' id="booking-form">
     <!-- CSRF token for security -->
     {% csrf_token %}
     
@@ -48,6 +48,36 @@
     <!-- Submit button for the form -->
     <button type="submit">Book Now</button>
 </form>
+
+<script>
+    const bookingDate = document.getElementById('id_booking_date');
+    const bookingTable = document.getElementById('id_table');
+    const bookingTime = document.getElementById('id_booking_time');
+    const availableTimesUrl = "{% url 'available-times' %}";
+
+    function updateAvailableTimes() {
+        bookingTime.innerHTML = '<option value="">Select a time</option>';
+        if (!bookingDate.value) {
+            return;
+        }
+
+        const params = new URLSearchParams({date: bookingDate.value});
+        if (bookingTable.value) {
+            params.set('table', bookingTable.value);
+        }
+
+        fetch(`${availableTimesUrl}?${params}`)
+            .then(response => response.json())
+            .then(data => {
+                data.times.forEach(time => {
+                    bookingTime.add(new Option(time.label, time.value));
+                });
+            });
+    }
+
+    bookingDate.addEventListener('change', updateAvailableTimes);
+    bookingTable.addEventListener('change', updateAvailableTimes);
+</script>
 
 <!-- End of content block -->
 {% endblock content %}

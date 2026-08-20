@@ -27,8 +27,7 @@
 
         <!-- List item for each booking. Displays the booking details and links to edit and delete the booking -->
         <li class="booking_item">
-            {{ booking.guest_name }} at {{ booking.table.name }} on {{ booking.booking_date|date:"d-m-Y" }} at {{
-            booking.booking_time }}
+            {{ booking.guest_name }} at  on {{ booking.booking_date|date:"d-m-Y" }} at {{ booking.booking_time|time:"h:i A" }}
             <a href="{% url 'edit-booking' booking.id %}" class="edit-link">Edit</a>
             <a href="{% url 'delete-booking' booking.id %}" class="delete-link">Delete</a>
         </li>

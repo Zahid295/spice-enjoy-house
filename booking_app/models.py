@@ -18,7 +18,7 @@ class Table(models.Model):
 
 class Booking(models.Model):
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     guest_name = models.CharField(max_length=100, validators=[MinLengthValidator(1)])
     booking_date = models.DateField()
     booking_time = models.TimeField()
@@ -26,4 +26,5 @@ class Booking(models.Model):
 
     def __str__(self):
         formatted_date = self.booking_date.strftime("%d-%m-%Y")
-        return f"{self.guest_name} at {self.table.name} on {self.booking_date} at {self.booking_time}"
+        formatted_time = self.booking_time.strftime("%H:%M")
+        return f"{self.guest_name} at {self.table.name} on {formatted_date} at {formatted_time}"
