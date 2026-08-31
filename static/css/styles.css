@@ -325,6 +325,38 @@ button {
     justify-content: center;
 }
 
+/* Disabled buttons for past bookings */
+.disabled {
+    background-color: #ccc;
+    color: #666;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: not-allowed;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+/* Rebook link styling */
+.rebook-link {
+    background-color: #007bff; /* green */
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.rebook-link:hover {
+    background-color: #0056b3;
+}
+
+
+
 /* Account forms */
 
 .account-page {
