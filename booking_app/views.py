@@ -51,6 +51,7 @@ def available_times(request):
 
 @login_required
 def book_table(request):
+    preselected_table = request.GET.get("table")
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -65,36 +66,40 @@ def book_table(request):
             ).exists()
             if existing_booking:
                 messages.error(request, "Oops! It looks like this table is already booked at the selected time. Please choose a different time or table.")
-                return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all(), 'error_message': 'This table is already booked at the selected time.'})
+                return render(request, 'booking_app/booking_form.html', {'form': form})
             else:
                  form.instance.user = request.user
                  form.save()
                  messages.success(request, 'Booking successful!')
                  return redirect('booking-details')
         else:
-            return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': Table.objects.all()})
+            return render(request, 'booking_app/booking_form.html', {'form': form})
 
     else:
         form = BookingForm()
 
-    name_collection = Table.objects.all()
+        if preselected_table:
+            form.fields['table'].initial = preselected_table
 
-    return render(request, 'booking_app/booking_form.html', {'form': form, 'name_collection': name_collection, 'confirmation_message': 'Booking successful!'})
+    return render(request, 'booking_app/booking_form.html', {'form': form})
 
 @login_required
 def booking_details(request):
-    print("Current user:", request.user)
     if request.user.is_authenticated:
-        user_bookings = Booking.objects.filter(user=request.user)
-        print("User bookings:", user_bookings) 
+        user_bookings = Booking.objects.filter(user=request.user) 
     else:
         user_bookings = None
 
-    return render(request, 'booking_app/booking_details.html', {'user_bookings': user_bookings})
+    today = timezone.now().date()
+
+    return render(request, 'booking_app/booking_details.html', {'user_bookings': user_bookings, 'today': today})
 
 @login_required
 def edit_booking(request, booking_id):
     booking = Booking.objects.get(id=booking_id)
+    if booking.booking_date < timezone.now().date():
+        messages.error(request, "Past bookings cannot be edited.")
+        return redirect('booking-details')
     if request.method != 'POST':
         form = BookingForm(instance=booking)
     else:
@@ -109,6 +114,9 @@ def edit_booking(request, booking_id):
 @login_required
 def delete_booking(request, booking_id):
     booking = Booking.objects.get(id=booking_id)
+    if booking.booking_date < timezone.now().date():
+        messages.error(request, "Past bookings cannot be deleted.")
+        return redirect('booking-details')
     if request.method == 'POST':
         booking.delete()
         return redirect('booking-details')

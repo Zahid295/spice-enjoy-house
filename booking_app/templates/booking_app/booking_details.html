@@ -28,10 +28,20 @@
         <!-- List item for each booking. Displays the booking details and links to edit and delete the booking -->
         <li class="booking_item">
             {{ booking.guest_name }} at {{ booking.table.name }} on {{ booking.booking_date|date:"d-m-Y" }} at {{ booking.booking_time|time:"h:i A" }}
+            {% if booking.booking_date < today %}
+            <span class="status past">- Past Booking</span>
+            {% endif %}
+
+            {% if booking.booking_date >= today %}
             <a href="{% url 'edit-booking' booking.id %}" class="edit-link">Edit</a>
             <a href="{% url 'delete-booking' booking.id %}" class="delete-link">Delete</a>
-        </li>
+            {% else %}
+            <span class="disabled">Edit</span>
+            <span class="disabled">Delete</span>
+            {% endif %}
 
+            <a href="{% url 'booking-form' %}?table={{booking.table.id}}" class="rebook-link">Rebook this table</a>
+        </li>
         {% endfor %}
     </ul>
 

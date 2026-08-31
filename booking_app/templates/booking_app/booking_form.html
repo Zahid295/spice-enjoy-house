@@ -7,18 +7,6 @@
 <!-- Content block that can be overridden by child templates -->
 {% block content %}
 
-<!-- Check if there are any messages to display -->
-{% if messages %}
-    <!-- Unordered list for messages -->
-    <ul class="messages">
-        <!-- Loop through each message -->
-        {% for message in messages %}
-            <!-- List item for each message. If the message has tags, add them as a class -->
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
-
 <!-- Form starts here, method is POST -->
 <form method='post' id="booking-form">
     <!-- CSRF token for security -->
